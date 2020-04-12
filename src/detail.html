@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+<body>
+<nav id="navigator">
+    <div class="left icon"><a href="home.html"><img src="../img/icon-inverse.png" height="50" width="50" alt="icon"></a></div>
+    <div class="left"><a href="home.html">Home</a></div>
+    <div class="left"><a href="browse.html">Browse</a></div>
+    <div class="left"><a href="search.html">Search</a></div>
+    <div class="right drop-down" id="drop-down">
+        <a id="drop-down-title"> My profile <span class="caret"></span></a>
+        <ul class="drop-down-menu" id="drop-down-menu">
+            <li class="drop-down-menuItem"><a href="#"><img src="../img/navbar/upload.png" alt="upload" height="15" width="15">upload</a></li>
+            <li class="drop-down-menuItem"><a href="#"><img src="../img/navbar/myPhotos.png" alt="myPhotos" height="15" width="15">my photos</a></li>
+            <li class="drop-down-menuItem"><a href="#"><img src="../img/navbar/myFavourites.png" alt="myFavourites" height="15" width="15">my favourites</a></li>
+            <li class="drop-down-menuItem"><a href="#"><img src="../img/navbar/login.png" alt="login" height="15" width="15">log in</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="content-wrapper">
+    <div class="title">
+        <span>Details</span>
+    </div>
+
+    <div class="content">
+        <div id="content-title">
+            <p>
+                <span id="title">不想取名</span>
+                <span id="uploader">by 无名氏</span>
+            </p>
+        </div>
+
+        <div id="content-information">
+            <div id="overview">
+                <img src="../img/travel-images/normal/medium/vertical/v1.jpg" alt="img">
+            </div>
+
+            <div id="information-wrapper">
+                <div id="like">
+                    <div class="title">
+                        <span>Like number</span>
+                    </div>
+
+                    <div class="content">
+                        <span>99</span>
+                    </div>
+                </div>
+
+                <div id="detail">
+                    <div class="title">
+                        <span>Image details</span>
+                    </div>
+
+                    <div class="content">
+                        <p>Content:<span class="type">Scenery</span></p>
+                        <p>Country:<span class="country">China</span></p>
+                        <p>City:<span class="city">Shanghai</span></p>
+                    </div>
+                </div>
+
+                <button id="favourite" value="favor" onclick="favor()">Add to favourite</button>
+            </div>
+        </div>
+
+        <div id="content-description">
+            <p>
+                这是一行更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长
+                更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长
+                更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长
+                更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长
+                更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长更长的文字。
+            </p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div id="left-footer">
+            <table>
+                <tr>
+                    <td><a href="#">使用条款</a></td>
+                    <td><a href="#">关于</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">隐私保护</a></td>
+                    <td><a href="#">联系我们</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Cookie</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="right-footer">
+            <a href="#"><img src="../img/footer/QRcode.jpeg" alt="QRcode" height="120" width="120"></a>
+        </div>
+
+        <div id="middle-footer">
+            <table>
+                <tr>
+                    <td><a href="#"><img src="../img/footer/github.png" alt="github" height="30" width="30"></a>
+                    </td>
+                    <td><a href="#"><img src="../img/footer/shot.png" alt="shot" height="30" width="30"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><img src="../img/footer/tencent.png" alt="tencent" height="30" width="30"></a>
+                    </td>
+                    <td><a href="#"><img src="../img/footer/weixin.png" alt="wechat" height="30" width="30"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <p>Copyright © 2019-2021 Web fundamental. All Rights Reserved. 备案号：19302010035</p>
+    </div>
+</footer>
+
+<div id="fixed">
+    <div id="to-top">
+        <img src="../img/fixed/totop.png" alt="to-top" height="30" width="30">
+    </div>
+
+    <div id="refresh">
+        <img src="../img/fixed/refresh.png" alt="refresh" height="30" width="30" onclick="alert('图片已更新')">
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    window.onload = function () {
+        resizeAndReposition(400, 400, "overview", false);
+    }
+</script>
+<script>
+    function favor(){
+        const favourite = document.getElementById("favourite");
+        if(favourite.className === "favored"){
+            favourite.className = "";
+            favourite.innerText = "Add to favourite";
+        } else {
+            favourite.className = "favored";
+            favourite.innerText = "Already favored";
+        }
+    }
+</script>
+</body>
+</html>
