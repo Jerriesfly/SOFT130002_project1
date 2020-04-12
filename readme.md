@@ -4,9 +4,9 @@
 
 学号：	19302010025
 
-Github地址：				
+Github地址：https://github.com/Jerriesfly/SOFT130002_project1
 
-Github Pages地址：	
+Github Pages地址：https://jerriesfly.github.io/SOFT130002_project1/
 
 ## 项目完成情况
 
